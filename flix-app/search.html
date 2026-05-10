@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .vignette-bottom {
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#d5e3ff",
+                        "tertiary-container": "#0072d7",
+                        "on-secondary-fixed-variant": "#474747",
+                        "tertiary-fixed-dim": "#a7c8ff",
+                        "outline-variant": "#5e3f3b",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-tertiary-fixed-variant": "#004689",
+                        "on-secondary-container": "#b6b5b4",
+                        "secondary-container": "#474747",
+                        "primary": "#ffb4aa",
+                        "inverse-on-surface": "#303030",
+                        "on-secondary": "#303030",
+                        "on-primary": "#690003",
+                        "on-surface-variant": "#e9bcb6",
+                        "on-tertiary": "#003061",
+                        "on-error-container": "#ffdad6",
+                        "surface-container": "#1f1f1f",
+                        "on-primary-fixed-variant": "#930007",
+                        "on-tertiary-container": "#f8f9ff",
+                        "on-primary-fixed": "#410001",
+                        "tertiary": "#a7c8ff",
+                        "on-error": "#690005",
+                        "surface-bright": "#393939",
+                        "on-primary-container": "#fff7f6",
+                        "on-background": "#e2e2e2",
+                        "inverse-primary": "#c0000c",
+                        "surface-dim": "#131313",
+                        "surface-container-low": "#1b1b1b",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "surface-container-lowest": "#0e0e0e",
+                        "background": "#131313",
+                        "secondary-fixed": "#e4e2e1",
+                        "outline": "#af8782",
+                        "surface-variant": "#353535",
+                        "primary-container": "#e50914",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e2e2e2",
+                        "surface-tint": "#ffb4aa",
+                        "surface-container-highest": "#353535",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "secondary": "#c8c6c6",
+                        "primary-fixed": "#ffdad5",
+                        "inverse-surface": "#e2e2e2",
+                        "on-tertiary-fixed": "#001b3c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "64px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "margin": "4% ",
+                        "sm": "12px",
+                        "base": "8px",
+                        "gutter": "16px",
+                        "lg": "40px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "label-bold": ["Be Vietnam Pro"],
+                        "display-xl": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                        "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-xl">
+<!-- Top Navigation Anchor -->
+<header class="bg-gradient-to-b from-black/80 to-transparent flex justify-between items-center w-full px-gutter py-sm z-50 fixed top-0 docked full-width">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface cursor-pointer" data-icon="menu">menu</span>
+<h1 class="font-display-xl text-headline-lg tracking-tighter text-primary">FLIX</h1>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-white/10">
+<img alt="Profile" data-alt="A professional close-up portrait of a young adult with a friendly expression, set against a dark, cinematic background with soft rim lighting. The visual style is premium and high-contrast, echoing a modern streaming service aesthetic. The color palette is dominated by deep blacks and subtle highlights, reflecting an elite membership status." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ8uGiDgq4uLAz6h0Ie1eFCz_6tGXpU5lLSl6UDDXnJ1aFil2JEtOc1b9-aLf0OmgwKCRIbJy777XfQIbdEJGH3a0CHxrarElRJIPaz08EOx7IVoJGcrHAPkLD-ubpt10Y_IcoS0CNCpTpdz0HHFKH_2rvhd8ZesY0Vq1ogUkwsUgjVtmkQm238IC6rTviDk4ahvLm_VbyURfBQlTbIA73Ek2JrtgtLqYwWxrK5AiNN5FmieiSzj3S-j9gOxzpCfb0yZdvC2oEXN0"/>
+</div>
+</div>
+</header>
+<!-- Search Section -->
+<main class="pt-[80px] px-gutter">
+<section class="mt-md">
+<!-- Search Bar -->
+<div class="relative flex items-center bg-surface-container-high rounded-lg p-base mb-md border-b-2 border-transparent focus-within:border-primary-container transition-all">
+<span class="material-symbols-outlined text-on-surface-variant px-sm" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-md text-on-surface placeholder-on-surface-variant py-sm" placeholder="Movies, shows, and more" type="text"/>
+<span class="material-symbols-outlined text-on-surface-variant px-sm cursor-pointer hover:text-primary transition-colors" data-icon="mic">mic</span>
+</div>
+<!-- Category Chips -->
+<div class="flex gap-sm overflow-x-auto hide-scrollbar pb-md">
+<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-full font-label-bold whitespace-nowrap">Action</button>
+<button class="bg-surface-variant text-on-surface px-md py-xs rounded-full font-label-bold whitespace-nowrap hover:bg-secondary-container transition-colors">Sci-Fi</button>
+<button class="bg-surface-variant text-on-surface px-md py-xs rounded-full font-label-bold whitespace-nowrap hover:bg-secondary-container transition-colors">Horror</button>
+<button class="bg-surface-variant text-on-surface px-md py-xs rounded-full font-label-bold whitespace-nowrap hover:bg-secondary-container transition-colors">Documentary</button>
+<button class="bg-surface-variant text-on-surface px-md py-xs rounded-full font-label-bold whitespace-nowrap hover:bg-secondary-container transition-colors">Thriller</button>
+<button class="bg-surface-variant text-on-surface px-md py-xs rounded-full font-label-bold whitespace-nowrap hover:bg-secondary-container transition-colors">Anime</button>
+</div>
+</section>
+<!-- Popular Searches Grid -->
+<section class="mt-lg">
+<h2 class="font-headline-md text-headline-md mb-md">Popular Searches</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Search Item 1 -->
+<div class="group relative flex items-center gap-md bg-surface-container hover:bg-surface-container-high transition-all rounded-lg overflow-hidden cursor-pointer active:scale-95 duration-200">
+<div class="w-1/3 aspect-[16/9] relative">
+<img alt="Neon City" class="w-full h-full object-cover" data-alt="A cinematic wide shot of a futuristic neon city under a dark rain-slicked sky. The atmosphere is heavy with drama and high-contrast lighting, featuring deep blacks and vibrant red neon accents. The scene evokes a sense of high-energy sci-fi adventure, perfectly matching the premium cinematic brand identity of a top-tier streaming platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8hzZQi_nSSjbLLTFqndDwalfC3_GbdEo667XMYrslvSNcJ4XJJwyO_qj3ZOAFKJF6GghAbnFeTbnId_Y7JTiBSm_44tBybGjP70x22lSl8sAAtJh30EcULw4R737b2mdAQMm3hIFxATxIVukN1NstB-L8SvYhPIeGQi0Y3X2DHYLKJzY1G0NoV02nkyElMiv0IQ0orXIaAX6XCblQixefymxOqTJZ8W62HQ_qMz9fdCJZP7ic2Bq0Z5WiOR1pFsESCy5svEKDDt4"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-1 flex justify-between items-center pr-md">
+<span class="font-label-bold text-on-surface group-hover:text-primary transition-colors">Cyberpunk 2077: Edgerunners</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<!-- Search Item 2 -->
+<div class="group relative flex items-center gap-md bg-surface-container hover:bg-surface-container-high transition-all rounded-lg overflow-hidden cursor-pointer active:scale-95 duration-200">
+<div class="w-1/3 aspect-[16/9] relative">
+<img alt="Interstellar Voyager" class="w-full h-full object-cover" data-alt="An intense, high-contrast close-up of an astronaut's helmet reflecting a distant, glowing galaxy. The lighting is dramatic and moody, utilizing deep shadows and brilliant points of starlight. The color palette centers on black and vibrant cosmic blues, with sharp red interface highlights on the suit. The mood is authoritative and awe-inspiring." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHlwTOa6LiYK7F8y0Olnu_dAQdJe0--YDJ9TBcdd7vgqlYcKL43r0bKVN750H91uVCWeN3MMX4vUKcWbxJtVpRdWR02IdfQmrNHcvpD2Dyt8iLsaZdOwOH6ydvcvYauXU-eqO4CkZpNXGJgGDGN9aeYNsBE6x-ur5vZRU4488Q_ekGsDtqqT2-tu_Q88YNrD-AZU9lnFowKlVxZA5K_JsuIE7vBInqSRx0slMHJ9sjAvVnw3X06tmmvhTMjhBbP7FTUeTFAQ_tLzw"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-1 flex justify-between items-center pr-md">
+<span class="font-label-bold text-on-surface group-hover:text-primary transition-colors">Interstellar Voyager</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<!-- Search Item 3 -->
+<div class="group relative flex items-center gap-md bg-surface-container hover:bg-surface-container-high transition-all rounded-lg overflow-hidden cursor-pointer active:scale-95 duration-200">
+<div class="w-1/3 aspect-[16/9] relative">
+<img alt="Silent Path" class="w-full h-full object-cover" data-alt="A suspenseful, low-angle shot of a dark, fog-covered forest path illuminated by a single, distant red light. The high-contrast visual style creates deep, impenetrable shadows and a sense of impending mystery. The atmosphere is premium and eerie, utilizing a minimal color palette of charcoal and blood-red highlights to convey intense horror themes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzTpt4sanOOWUmQc4-WzZPnXnKpprf8dMmSATCAq5ZreKlOyIDwBUHFD4kMf6GUoTVAae7VaplCj2pSiQTe5d_EM_beOSgU-W8zpK5t90uQLKQLv3c0ccOOQy0-7wF-8zNw_ZD3Xnro9x--DABGpdiOQKz1usHgp1xUkOOeHd7C8J-feMqBRC2T6YTm4vYU7y6t08_SL5aDxo0iUqFS7iJsmeMLYehxnAA41pMJhGa2aKA5lB3kj3A8cTEXEGG-sFeRznY1IOqz0k"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-1 flex justify-between items-center pr-md">
+<span class="font-label-bold text-on-surface group-hover:text-primary transition-colors">The Silent Path</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<!-- Search Item 4 -->
+<div class="group relative flex items-center gap-md bg-surface-container hover:bg-surface-container-high transition-all rounded-lg overflow-hidden cursor-pointer active:scale-95 duration-200">
+<div class="w-1/3 aspect-[16/9] relative">
+<img alt="Formula Velocity" class="w-full h-full object-cover" data-alt="A powerful documentary-style image showing a high-speed racing car captured with motion blur against a dark, dramatic evening track. The lighting is intense, highlighting the sleek carbon fiber body with sharp red streaks of light. The visual impact is high-energy and authoritative, emphasizing speed, technology, and premium production values." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1ukudhWAfO--rbanz2Vq4XtRnmIVcIyIIPKecxIKU6gTEUhutGmKnN5gHSh8WnUxF358kRFQBsIeJQM-mzZEsrB5saGC89C17L0Wt3MXmX6niWRoDXH0LxnRSiLgbsqMp4CRwRaWJ0FVJ541T6GDNrstYU437rI6jD8KgX-PSsCbRsOm00YJa5dbsUTA9Xh9N1vcNPblccnLxlfu7TZ95nFbC9xdcSCNfAqsEMeIq3zJ9sN4gzVzbolmHqUArFSwTJKhnS-xMJ8E"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-1 flex justify-between items-center pr-md">
+<span class="font-label-bold text-on-surface group-hover:text-primary transition-colors">Formula Velocity</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<!-- Search Item 5 -->
+<div class="group relative flex items-center gap-md bg-surface-container hover:bg-surface-container-high transition-all rounded-lg overflow-hidden cursor-pointer active:scale-95 duration-200">
+<div class="w-1/3 aspect-[16/9] relative">
+<img alt="The Algorithm" class="w-full h-full object-cover" data-alt="An abstract, high-contrast digital landscape of data streams flowing like a river through a dark void. The lighting is sharp and technological, with vibrant red data pulses cutting through a deep black environment. The aesthetic is sophisticated and modern, representing the cutting edge of digital documentary filmmaking and visual impact." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDStOBnEvYLqEB_oCxT0q_M5Lcmy3UTOa1NTXGVXv4c0dBp6FT9_fba9gcFK2Zji-cQlTDUg4vzeD2PtR0NhbDwJmHQ6bVBc3hDxh8naLLex4b9ajd8orjYoiBtz7D3r12d5Nw74CmorapoDHJDeAqh1pbYtqEX_liww7K7siq2tFLkZrbsA3mrB78F6XdTFdEXyGmMiB3b2AjTBQhWAFzXcP5yFP_0HejyxI5YxVEkxnYUv9CuGVISPuOu4K_zX6sa4OIHms0aPt4"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-1 flex justify-between items-center pr-md">
+<span class="font-label-bold text-on-surface group-hover:text-primary transition-colors">The Algorithm</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<!-- Search Item 6 -->
+<div class="group relative flex items-center gap-md bg-surface-container hover:bg-surface-container-high transition-all rounded-lg overflow-hidden cursor-pointer active:scale-95 duration-200">
+<div class="w-1/3 aspect-[16/9] relative">
+<img alt="Last Frame" class="w-full h-full object-cover" data-alt="A dramatic cinematic still of an old-fashioned film camera set in a modern, dark studio. The scene is illuminated by a single, high-contrast spotlight that creates sharp highlights and deep, velvety shadows. The color palette is strictly monochromatic with a single, bold red accent from a recording light, evoking a sense of premium cinema history." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYQJntLTXm2rhsx1OxytePwPOQNd3WAg20rkwSkL1INLnsD8hQdGPqdNaCt50hS0E6hAUKvXuvZjO0A0ZB0nDM5O6eCS-CCcrleOR1Z76qFfucDQvMCilSgaKIirjHhgPydrl5q2e2_9qcls0fiSKAs1aZXoj8-aAStXdyPEi6LauBgrb77kmdBWHpzyQPaCSYq8O1o-aSmIlmNSFQ4VNWWaIxrlmIk_Vs7L6SrnHKVZrCXSNqQCHdk3PiR51mitqmtGJa6ep2UAU"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-1 flex justify-between items-center pr-md">
+<span class="font-label-bold text-on-surface group-hover:text-primary transition-colors">Last Frame</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center py-base px-xl bg-surface/95 backdrop-blur-md docked full-width">
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</div>
+<!-- Active Tab: Search/Explore matches the Discover intent -->
+<div class="flex flex-col items-center justify-center text-primary dark:text-primary scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="video_library" data-weight="fill">video_library</span>
+<span class="font-label-sm text-label-sm">New &amp; Hot</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+<span class="font-label-sm text-label-sm">Downloads</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</div>
+</nav>
+<script src="js/navigation.js"></script></body></html>

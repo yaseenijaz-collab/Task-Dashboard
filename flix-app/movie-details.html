@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            margin: 0;
+        }
+        .scrim-vignette {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 85%, #000000 100%);
+        }
+        .glass-card {
+            background: rgba(45, 45, 45, 0.6);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#d5e3ff",
+                        "tertiary-container": "#0072d7",
+                        "on-secondary-fixed-variant": "#474747",
+                        "tertiary-fixed-dim": "#a7c8ff",
+                        "outline-variant": "#5e3f3b",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-tertiary-fixed-variant": "#004689",
+                        "on-secondary-container": "#b6b5b4",
+                        "secondary-container": "#474747",
+                        "primary": "#ffb4aa",
+                        "inverse-on-surface": "#303030",
+                        "on-secondary": "#303030",
+                        "on-primary": "#690003",
+                        "on-surface-variant": "#e9bcb6",
+                        "on-tertiary": "#003061",
+                        "on-error-container": "#ffdad6",
+                        "surface-container": "#1f1f1f",
+                        "on-primary-fixed-variant": "#930007",
+                        "on-tertiary-container": "#f8f9ff",
+                        "on-primary-fixed": "#410001",
+                        "tertiary": "#a7c8ff",
+                        "on-error": "#690005",
+                        "surface-bright": "#393939",
+                        "on-primary-container": "#fff7f6",
+                        "on-background": "#e2e2e2",
+                        "inverse-primary": "#c0000c",
+                        "surface-dim": "#131313",
+                        "surface-container-low": "#1b1b1b",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "surface-container-lowest": "#0e0e0e",
+                        "background": "#131313",
+                        "secondary-fixed": "#e4e2e1",
+                        "outline": "#af8782",
+                        "surface-variant": "#353535",
+                        "primary-container": "#e50914",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e2e2e2",
+                        "surface-tint": "#ffb4aa",
+                        "surface-container-highest": "#353535",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "secondary": "#c8c6c6",
+                        "primary-fixed": "#ffdad5",
+                        "inverse-surface": "#e2e2e2",
+                        "on-tertiary-fixed": "#001b3c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "64px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "margin": "4% ",
+                        "sm": "12px",
+                        "base": "8px",
+                        "gutter": "16px",
+                        "lg": "40px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "label-bold": ["Be Vietnam Pro"],
+                        "display-xl": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                        "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="bg-transparent dark:bg-transparent docked full-width top-0 sticky bg-gradient-to-b from-black/80 to-transparent flat no shadows flex justify-between items-center w-full px-gutter py-sm z-50">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary dark:text-primary cursor-pointer">menu</span>
+<h1 class="font-display-xl text-headline-lg tracking-tighter text-primary dark:text-primary">FLIX</h1>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary dark:text-primary cursor-pointer">search</span>
+<div class="w-8 h-8 rounded-full bg-secondary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a cinematic enthusiast with subtle lighting reflecting off their spectacles, suggesting they are watching a vibrant movie screen. The style is moody and high-contrast, featuring a palette of deep blacks and sharp red highlights. The image captures a professional, premium aesthetic consistent with a high-end streaming platform user profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Gudatqd3kgSEgi9eeW8vyu4uQrspWpOIgoCx5JthZhHnHLg38uu5-P3yQOQkXLmyCu4HPN8Jkhzd7TJrvcOQvc67ifHtc7JsC7-iNl9dMjPeh26qsoH5tO0vVZVKQpusjD219znW6PS4HwpSM0mLqRasp7bSq2FGAdjA5rkB0cuSAwaFRvyy5Kxq2mv4uNeAn0YVZwmhyya1cjxhpnStgkp0seyz1NjFlqyyepiGoHD3CJgMM7gmcAOmFWsAGhibHsuT58OKKZI"/>
+</div>
+</div>
+</header>
+<main class="pb-xl">
+<!-- Hero Section / Movie Still -->
+<section class="relative w-full h-[530px] md:h-[707px] overflow-hidden">
+<div class="absolute inset-0 scrim-vignette z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="A stunning, wide-angle cinematic movie still featuring a futuristic cityscape at night with glowing neon highlights in vibrant red and cool blue. The scene is high-contrast, emphasizing deep black shadows and brilliant light sources, creating an immersive and dramatic atmosphere. The composition is balanced and authoritative, evoking the feeling of a premium high-budget sci-fi epic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX1ta1hiOEX00ZAwP-k-NSTCiCYQm2K78CdmpKjjoDKLmlJxNdcP_uylH1muE5qRYU0tRtRq99nvGwFr5DTQ-5QGjEpw-UrhhAt_KWMYUcGwTTogls0uS5PGAdEvScGAhoayYBjcKwa93Bs5j8KKFvibY4fP-fIDTQEYg5-NMXVr-Ooze-IZLfFMJJE9OjxsfyDZBsNCFburT0plyneyOtSLB2RRg4FvwTgwjpKY_se0OF53WzN3MRSn9MlDvxegPRmJOF4R4iEes"/>
+<div class="absolute bottom-0 left-0 w-full p-margin z-20 flex flex-col gap-md">
+<div class="flex items-center gap-sm text-primary font-label-bold uppercase tracking-widest text-label-sm">
+<span class="material-symbols-outlined text-[18px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Original Series
+                </div>
+<h2 class="font-display-xl text-headline-lg md:text-[64px] leading-none">THE LAST FRONTIER</h2>
+<div class="flex flex-wrap items-center gap-md mt-base">
+<button class="bg-primary-container text-on-primary-container px-xl py-base rounded-lg font-label-bold flex items-center justify-center gap-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Play
+                    </button>
+<button class="bg-surface-variant/40 backdrop-blur-md text-on-surface border border-white/10 px-xl py-base rounded-lg font-label-bold flex items-center justify-center gap-sm hover:bg-surface-variant/60 transition-colors">
+<span class="material-symbols-outlined">download</span>
+                        Download
+                    </button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-variant/40 backdrop-blur-md border border-white/10 text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Movie Details -->
+<section class="px-margin py-lg grid grid-cols-1 md:grid-cols-12 gap-xl">
+<div class="md:col-span-8 flex flex-col gap-md">
+<div class="flex items-center gap-md text-on-surface-variant font-label-sm">
+<span class="text-primary font-bold">98% Match</span>
+<span>2024</span>
+<span class="border border-on-surface-variant px-xs rounded text-[10px]">18+</span>
+<span>2h 14m</span>
+<span class="border border-on-surface-variant px-xs rounded text-[10px]">Ultra HD 4K</span>
+</div>
+<p class="font-body-lg text-on-surface leading-relaxed max-w-3xl">
+                    In a world where memories are traded like currency, a disillusioned detective discovers a fractured timeline hidden within a corrupted data core. As the corporate conglomerates tighten their grip on the city's remaining humanity, he must decide between preserving the painful truth or living a comfortable lie.
+                </p>
+<div class="mt-md">
+<h3 class="font-label-bold text-on-surface-variant mb-sm uppercase text-label-sm tracking-widest">Cast</h3>
+<div class="flex flex-wrap gap-md">
+<div class="flex items-center gap-base">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a famous actor with sharp features and a serious expression, lit with dramatic rim lighting. The style is cinematic and high-contrast, featuring a dark background that matches the premium streaming platform's aesthetic. The color palette is restricted to deep grays and subtle skin tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwwzzQeiZhI9ntrNjFxsc0_DbyqkQqgrkPQ5tS-8_rDCxyI5bo2cRZJ8N4KX36mMhWC90lonChmYn1N6ZBtLx9KDfdx3Nvx76WWsXjWMWGPR1nPp7c8-agzwCeB8sbGFr-X8S0MX1rWKSUzp2rP8WwOLlQ8n-3V84LPvKUm1VyxX6DzA0pobAzG-VYRnNsIAv16fAqUg0IaKZxMkzUo72QZkZeZuTKXVE2woGUhahag6TkI8P32eCtBofNQo3b-4PxKmk_7SWo8NA"/>
+</div>
+<span class="font-body-md text-on-surface">Elias Thorne</span>
+</div>
+<div class="flex items-center gap-base">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a talented actress with a confident gaze, illuminated by soft cinematic key lighting. The image maintains a high-contrast, dark-mode visual style with a deep black background and subtle red atmospheric highlights. The overall mood is sophisticated and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7RIrTjT0C4l0-_6vw1NAH6ygZ7swjTftJVYVYCRri9kX_NUerwlsmL2f_3kgZWPgk_gaKm0bfvA4FG18YbNBdJgIqu0lz_pJw8ug5fCtYqSEYev6_X2Jt44I_RBjmV_SBpwMBDn3H1yTXi6vzAYConpFFc7-7lUKlgvF21WL0dKVRWZu5j-UH1pFiJ-XMxnPa15PrZ6Lp13R9I8N95FR9797qdpHWJQIbF9VCaodfK0mIJTXpqRkRiZ63wHDCT7AErX4wR3u3fC0"/>
+</div>
+<span class="font-body-md text-on-surface">Sarah Vane</span>
+</div>
+<div class="flex items-center gap-base">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A sharp, detailed headshot of a veteran actor featuring weathered facial features and intense eyes. The lighting is moody and dramatic, consistent with a high-end cinematic production. The background is pitch black to ensure a seamless fit into the dark UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgj-H132EbSr4PdRI6-M-LO2haaySbYNaCfpJG2-Il02G86hIfsNoq8nmRfrDYJ9EEL2k7YWbCN9JQ1v0FY7_b1r6ZdxARC4omAo44ALOb_P0IHmOBKoKrtNQpYsD3U9RQhCgIcI67z6dxnkmDg0J07g5wDlHfb03hnysxWwMn7tqjyEFXQX5AMT3nHJpKYOd7m6IKYpNEH6U4Ol0Hs9EVHJbZT4G4GcrIEyhNrQhZAdBq17FZ0yTR7-dutslFmMpG0GXef6RZa40"/>
+</div>
+<span class="font-body-md text-on-surface">Marcus Reed</span>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-md">
+<div class="glass-card p-md rounded-xl border border-white/5">
+<h3 class="font-label-bold text-on-surface mb-base">Details</h3>
+<div class="flex flex-col gap-sm">
+<div class="flex justify-between font-label-sm">
+<span class="text-on-surface-variant">Director</span>
+<span class="text-on-surface">Denis Villeneuve</span>
+</div>
+<div class="flex justify-between font-label-sm">
+<span class="text-on-surface-variant">Writers</span>
+<span class="text-on-surface">Lana Wachowski, Alex Garland</span>
+</div>
+<div class="flex justify-between font-label-sm">
+<span class="text-on-surface-variant">Genres</span>
+<span class="text-on-surface">Sci-Fi, Thriller, Noir</span>
+</div>
+<div class="flex justify-between font-label-sm">
+<span class="text-on-surface-variant">This movie is</span>
+<span class="text-on-surface text-right">Mind-Bending, Gritty</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- More Like This Section -->
+<section class="px-margin py-lg border-t border-white/5">
+<h3 class="font-headline-md text-on-surface mb-md">More Like This</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-md">
+<!-- Related Card 1 -->
+<div class="group relative aspect-[2/3] rounded-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover" data-alt="A cinematic movie poster for a sci-fi thriller featuring a lone figure standing against a colossal neon gateway. The design uses high-contrast blacks and vibrant red lighting. The atmosphere is mysterious and epic, fitting the high-energy, premium brand identity of the streaming platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCag6ey2isJa-9vaAA4HRySAssGCOh7c1AFtcZ8xJtBMEJZlM3rLL6jhLzr0PHKw6BZxdPd3MY0ksVY3g-YY0pyVh--HGtAh5IRYXSvFpHvNBc9VhFNFE7df30LUCd3UkMZ6jMHjWlY56nkT6qh7qiUWg7H3lcLb-kr5DLd-B8cRsvu7EmZwAGlRHCugJGmip9BEUJjCNwtMFcow4XyI0lmW96WNzQg37HWFyRA7GWd9qWorw1pLYdUaw-FP-G7I9cV6qxZ0Zpu4NM"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[48px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="group relative aspect-[2/3] rounded-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover" data-alt="A bold, high-contrast movie poster depicting an abstract digital landscape with geometric shapes in deep red and obsidian black. The style is modern and authoritative, evoking a sense of high-stakes drama and technological sophistication. Perfect for a premium entertainment interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTxPik10bekBdxpxh2AHtS2Cdu1GDLbKH655AP0fAAz-W2UafzDseJ-1YmTdnaY_dW1dAFiR1SuTxcs1-r_rK_npWxwWH7kozq5P9Cal_RJ7PqJy_kCxTH3AEpqzcvehtHr6IZU8pdyq81HTwqXtS_xd_Kznpji62c3Dw7uR7APZmB6uPWsC0AmI4av0sJbPOcrObdadwYP2SuFpHO40SU4EznT8nisZzZG0PYB4gyfo9Gd8y1geCduac6VyA8dAGyjtah6l3GbJ4"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[48px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<!-- Related Card 3 -->
+<div class="group relative aspect-[2/3] rounded-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover" data-alt="A dramatic movie poster showing a close-up of a cybernetic eye reflecting a burning city. The lighting is intense and focused, utilizing the brand's primary red accent color against a pitch-black background. The mood is dark and immersive, prioritizing visual impact over density." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSLtjiwtmOu-W5AdzUHOZxM94S3mFawBEU-p0GHALJzY5ZwL0WEXVFq1M_gFPzXYScXZeReCWfamjHyc_j0YNI_S_M5-Xw36eMf90d_yennTqs5wr9COPWjQTmpnFbpxg2Uyuym-OhmiZiqz2HXvMk8TTGzr_qQVdhSNXTHmpQlmp0x_kzWVw4s7qpnDpwnPUqvDrzOoAa1ixC4blZaNFGvOD_A6JgyRo56FMKF_ZVXj41mVzMOMC3sg2jVWeA6ji7DZw5PMbgBR0"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[48px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<!-- Related Card 4 -->
+<div class="group relative aspect-[2/3] rounded-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover" data-alt="An asymmetric movie poster design featuring a split-screen of two contrasting worlds connected by a red energy beam. The palette is dominated by deep blacks and high-key red accents. The aesthetic is avant-garde and cinematic, ensuring a premium feel in a dark UI environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8MucKHJqhzEgRwYSBSxUjTTpE-usZCNI48p2O6gYtEUu06UqzqY3MnREiCos0dCa_7vf3xaw4Wynjz9vITpM1UM7l8jkGfR3qxThgCJavEN5gHu0rpsUXJdOAlfnpeuT2H7RIXabkkQ6Ok5GkMB3MrsWRQf3j1gy4P8FImC6-YmQcZedcJrfpNoPGToRI9kTRHk6z1PgFDrafV6DDnorfDU9AtvDBBOaEsGqlZBa-Hv1MTAu98ia94s6S7XZGb4uTDZRxRkCGSn8"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[48px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<!-- Related Card 5 -->
+<div class="group relative aspect-[2/3] rounded-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover" data-alt="A minimalist yet striking movie poster for an artificial intelligence documentary, featuring a glowing red neural network pattern on a deep black canvas. The design is clean, professional, and high-contrast, drawing the viewer's eye to the central vibrant element." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXWFtTm4_A_kViL4b4hT6m2j2I8TqTpEXLSFOE0VAM-iytpVkQO-vW_NShPaRetFSkRIF01jAzcz4IGDm3xWeSYVybXXAWdLYQchQg_FvC4jMBhMGlCNUJAoIXSfRrUAm3Mnzpv8GIBY2sAZ6OT6zOnA_9IBikRca4KbUMIJtmjjUlf1BDbZEsyaKqT-TvVcJjQ60OCNk5o15ibW9DNjz9ppSsQWBWcIF4szC_wkub4CFcL9TaGSqn8wOR-2mynrp6DbfJKWiXu84"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[48px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<!-- Related Card 6 -->
+<div class="group relative aspect-[2/3] rounded-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover" data-alt="A high-energy movie poster showing a high-speed chase through a dark tunnel illuminated by red tail lights. The composition is dynamic and balanced, utilizing motion blur to create excitement. The colors are strictly aligned with a dark-mode palette, emphasizing visual drama." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcJS_s5fH3S8yvGyJmd3-WVD2hgmP8eJP7K2aI0Z_J7dMnos9vim_1DKW7xGFNUhNIPVVbspeO83kNLMM94AULLaOz3-CwbUJ0mFCKf2ArMkj5Wy4G0HO7vVudt32OcG-01-q48-tRG8BvueJecsZsd4eqOJ5SOU-12ZIzNPoHf2aqKI2BWE-WHP_qJS-qc0iNo3hxz56dUcZx3sbJbT60XEtGiE3bc0tOFtsva5J-kdF0v7Lp4KcdUuD-INXtkSF5NhSothBhALM"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[48px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Hidden on Desktop) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center py-base px-xl bg-surface/95 backdrop-blur-md font-label-sm text-label-sm">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined">video_library</span>
+<span>New &amp; Hot</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined">download</span>
+<span>Downloads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<!-- Sidebar / Drawer (Hidden by default, used for interaction) -->
+<div class="hidden fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-64 rounded-r-xl bg-surface-container-high dark:bg-surface-container-high shadow-xl font-body-md text-body-md transition-transform transform -translate-x-full" id="drawer">
+<div class="p-md flex flex-col gap-sm border-b border-white/5">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A detailed profile picture of a premium member with a look of cinematic wonder. The lighting is low-key with red atmospheric accents, and the background is a smooth, dark surface-container color. The style is high-contrast and authoritative, reflecting the user's status as a Cinematic Explorer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw8rO5n7ssF31laRoCU6iGx2YT4LOwIyLSNo5KDI_CgZzdVLQbR0ncOCMeVmznnaw_xEtaHhd4jglArlwC6NFp3qAVkXAmVlIteYXuq9R2L9EyU8QwUX8e_KaCXdwHMysTY3mS7uS2kFNNgLYbkXZxLVGiTInhRSXitxof7vGhfAfMf5fYp0qHi6wvh8vQDPaQ0UBUXToguCn8JKdsRvMsyMAghH4-K0iUqg1dusurKw_63zpBC2rHyrY-nOPnkuDhPiRzZWJx1Eg"/>
+</div>
+<div>
+<h4 class="font-label-bold text-on-surface">Cinematic Explorer</h4>
+<p class="text-label-sm text-on-surface-variant">Premium Member</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 py-md">
+<div class="px-md py-base flex items-center gap-md text-on-surface-variant hover:bg-surface-variant transition-colors cursor-pointer">
+<span class="material-symbols-outlined">add</span>
+<span>My List</span>
+</div>
+<div class="px-md py-base flex items-center gap-md text-on-surface-variant hover:bg-surface-variant transition-colors cursor-pointer">
+<span class="material-symbols-outlined">notifications</span>
+<span>Notifications</span>
+</div>
+<div class="px-md py-base flex items-center gap-md text-on-surface-variant hover:bg-surface-variant transition-colors cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</div>
+<div class="px-md py-base flex items-center gap-md text-on-surface-variant hover:bg-surface-variant transition-colors cursor-pointer">
+<span class="material-symbols-outlined">help</span>
+<span>Help</span>
+</div>
+</nav>
+<div class="p-md border-t border-white/5">
+<div class="flex items-center gap-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">logout</span>
+<span>Sign Out</span>
+</div>
+</div>
+</div>
+<script src="js/navigation.js"></script></body></html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#d5e3ff",
+                    "tertiary-container": "#0072d7",
+                    "on-secondary-fixed-variant": "#474747",
+                    "tertiary-fixed-dim": "#a7c8ff",
+                    "outline-variant": "#5e3f3b",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "on-tertiary-fixed-variant": "#004689",
+                    "on-secondary-container": "#b6b5b4",
+                    "secondary-container": "#474747",
+                    "primary": "#ffb4aa",
+                    "inverse-on-surface": "#303030",
+                    "on-secondary": "#303030",
+                    "on-primary": "#690003",
+                    "on-surface-variant": "#e9bcb6",
+                    "on-tertiary": "#003061",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#1f1f1f",
+                    "on-primary-fixed-variant": "#930007",
+                    "on-tertiary-container": "#f8f9ff",
+                    "on-primary-fixed": "#410001",
+                    "tertiary": "#a7c8ff",
+                    "on-error": "#690005",
+                    "surface-bright": "#393939",
+                    "on-primary-container": "#fff7f6",
+                    "on-background": "#e2e2e2",
+                    "inverse-primary": "#c0000c",
+                    "surface-dim": "#131313",
+                    "surface-container-low": "#1b1b1b",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "surface-container-lowest": "#0e0e0e",
+                    "background": "#131313",
+                    "secondary-fixed": "#e4e2e1",
+                    "outline": "#af8782",
+                    "surface-variant": "#353535",
+                    "primary-container": "#e50914",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e2e2e2",
+                    "surface-tint": "#ffb4aa",
+                    "surface-container-highest": "#353535",
+                    "surface-container-high": "#2a2a2a",
+                    "surface": "#131313",
+                    "primary-fixed-dim": "#ffb4aa",
+                    "secondary": "#c8c6c6",
+                    "primary-fixed": "#ffdad5",
+                    "inverse-surface": "#e2e2e2",
+                    "on-tertiary-fixed": "#001b3c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "64px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "margin": "4% ",
+                    "sm": "12px",
+                    "base": "8px",
+                    "gutter": "16px",
+                    "lg": "40px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "label-bold": ["Be Vietnam Pro"],
+                    "display-xl": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Shell -->
+<header class="flex justify-between items-center w-full px-gutter py-sm z-50 fixed top-0 sticky bg-gradient-to-b from-black/80 to-transparent flat no shadows">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-80 transition-opacity">menu</span>
+<h1 class="font-display-xl text-headline-lg tracking-tighter text-primary dark:text-primary">FLIX</h1>
+</div>
+<div class="flex items-center gap-md">
+<nav class="hidden md:flex gap-gutter">
+<a class="text-primary font-label-bold transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface hover:text-primary transition-colors duration-300" href="#">TV Shows</a>
+<a class="text-on-surface hover:text-primary transition-colors duration-300" href="#">Movies</a>
+<a class="text-on-surface hover:text-primary transition-colors duration-300" href="#">My List</a>
+</nav>
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-80 transition-opacity">search</span>
+</div>
+</header>
+<main class="pb-xl">
+<!-- Billboard / Hero Section -->
+<section class="relative w-full h-[751px] flex flex-col justify-end px-margin pb-xl overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Featured Movie Background" class="w-full h-full object-cover" data-alt="A cinematic widescreen shot of a futuristic cyberpunk city at night with towering neon-lit skyscrapers and flying vehicles. The atmosphere is filled with a dense, moody blue and purple haze, contrasting sharply with the brilliant primary red glow of holographic advertisements. Deep black shadows anchor the composition, creating a high-contrast, premium streaming aesthetic. The lighting is dramatic and evocative, drawing the viewer into a high-energy sci-fi epic world." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGxObh1eT3Tjs8LObr8Dg18rHivQT8U4tPipxaoPvp8JhKOU7MhZ7ngAGCYCw4bYBVAGUfk1tGUQjfLY8agRcuHT40xsL_eFOeEbI3FtdvVofv59JkA0_N-2N5bwmQlxRxJc6egJmXAQqlRqHcwB4QAxuQvt23n-Py8y6mDQODChGV7sE9F3DzRT81YgtcqaWJDaH5LUYEvJ6mJn3494MdGYN4_wD__4CGlbkFXShjXVLbh5gRofEhf6QJe-4rV2ZE4kDPQiZuq2A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-black/30"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl space-y-md">
+<div class="flex items-center gap-sm">
+<span class="bg-primary-container text-on-primary-container font-label-bold text-label-sm px-sm py-xs rounded-lg uppercase tracking-widest">Original</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">2024 • Action • 2h 15m</span>
+</div>
+<h2 class="font-display-xl text-display-xl leading-[0.9] tracking-tighter">NEON<br/>REVENGE</h2>
+<p class="text-on-surface-variant font-body-lg line-clamp-3 max-w-lg">
+                    In a world where memories are currency, one rogue agent must navigate the neon-drenched underworld to retrieve her stolen past before it's deleted forever.
+                </p>
+<div class="flex items-center gap-md pt-base">
+<button class="bg-primary-container text-on-primary-container px-lg py-sm rounded flex items-center gap-base font-label-bold hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Play
+                    </button>
+<button class="bg-surface-variant/40 backdrop-blur-md text-on-surface border border-white/10 px-lg py-sm rounded flex items-center gap-base font-label-bold hover:bg-surface-variant/60 transition-colors">
+<span class="material-symbols-outlined">add</span>
+                        My List
+                    </button>
+</div>
+</div>
+</section>
+<!-- Content Rows -->
+<div class="space-y-xl mt-base">
+<!-- Row: Continue Watching -->
+<section class="pl-margin">
+<h3 class="font-headline-md text-headline-md mb-gutter">Continue Watching</h3>
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar pb-sm">
+<!-- Progress Card 1 -->
+<div class="min-w-[280px] group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden mb-base">
+<img alt="Crime Drama Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A dramatic scene from a high-stakes crime drama set in a dimly lit, high-end penthouse overlooking a rainy New York City. The color palette is dominated by deep charcoal grays and blacks, with sharp crimson accents from a glass of red wine on a glass table. The lighting is low-key and sophisticated, focusing on a mysterious silhouette looking out the window. The overall mood is tense, professional, and cinematic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCajXFkGaMYSChlMaVJ_HrwpR3GyVzC5935KBpN8LUcO4IRf4CIuTOOXHW1oCur7pp3lcX1ZjwRlVIAAjRDh8af_tWc0OGlkjSaskExJEOHF4WuqEBR24di1bZ1R-25MDrEzTKFHB2sqiqQ57xB70vBXtr0pUdamff2uubtGQdKqphar09mGAXhqv_bQgLQ86qN2egMK7AdWGoJ8kBmrKkCFgbLM0iYgQt9CDLjUrETspVUN8aTVZY4VJYPbD7RWI9xYKzQlaJscaI"/>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-surface-variant">
+<div class="h-full bg-primary-container w-3/4"></div>
+</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-display-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<h4 class="font-label-bold text-on-surface">The Final Gambit</h4>
+<p class="text-label-sm text-on-surface-variant">S1 : E4 "The Betrayal"</p>
+</div>
+<!-- Progress Card 2 -->
+<div class="min-w-[280px] group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden mb-base">
+<img alt="Sci-fi Landscape Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A sweeping, cinematic landscape shot of a futuristic desert outpost under a double sunset of orange and deep red. High-tech minimalist buildings are nestled among dark, jagged rock formations. The lighting creates long, dramatic shadows and highlights the sleek metallic textures of the architecture. The color palette emphasizes high-contrast blacks and warm red tones, evoking an epic science fiction journey." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVBjqLileTU1qi9pHGZQY0-77AUUr9yIOpKZcLCoE5nBD2kFoXqMu2ion5aW5rhv0ZCv9NM2QwwkmPDUktMhCJao4kJPtBnL4Y7ygx-5wmw2H-2L6RNPvzyCsV2eSqin7UlrW6R8J3O4MHvXGwy0p_E6y_Eicg5o6CgWtfRcPRggGgBLHoEXpP_X7tLvV6Auyhgri67-0M0Wc1oUpXk4TbnOFquOhAeQihA1dU1Tbdt0ijeZQ-TjpKoYUR7IgZ7DHgmQ-K0W_mXRg"/>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-surface-variant">
+<div class="h-full bg-primary-container w-1/4"></div>
+</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-display-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<h4 class="font-label-bold text-on-surface">Desert Mirage</h4>
+<p class="text-label-sm text-on-surface-variant">S2 : E1 "The Awakening"</p>
+</div>
+<!-- Progress Card 3 -->
+<div class="min-w-[280px] group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden mb-base">
+<img alt="Thriller Lab Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A moody, high-contrast interior of a futuristic laboratory with glowing red biological samples in glass tubes. The background is a deep, void-like black, while the tubes emit an intense, vibrant primary red light that reflects off the stainless steel surfaces. The visual style is clinical yet menacing, with a strong focus on texture and light. This scene suggests a high-stakes medical or scientific thriller." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBYg9DTBqKh36Fcn5XC2ifZIiWemD0H252ie__6h4yp88SiEopAg0jpwgMf678hjFjNu5w3VAQjB7x6oZd6nk52GdbUpV1n6g1aDltGPsKmhk6SX4JxeVY6d4cyxkAmc4kbHYBO9Ui6n2fazoDynLrJq2r_VQDp5oLB-XdDSxBd261HaLaK7YY-ldvD0Xp_4n47Xwhy2j3mpbODeyof9C6_X0i0Tx1A1lYng-94YFwQk_WGA1FsD5Gqh1G17Q5iRSnU-b5cRZYWYw"/>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-surface-variant">
+<div class="h-full bg-primary-container w-1/2"></div>
+</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-display-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<h4 class="font-label-bold text-on-surface">V-Nexus</h4>
+<p class="text-label-sm text-on-surface-variant">S1 : E8 "Containment Fail"</p>
+</div>
+</div>
+</section>
+<!-- Row: Trending Now (Vertical Posters) -->
+<section class="pl-margin">
+<h3 class="font-headline-md text-headline-md mb-gutter">Trending Now</h3>
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar pb-sm">
+<!-- Movie Card 1 -->
+<div class="min-w-[160px] md:min-w-[220px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden bg-surface-variant">
+<img alt="Action Movie Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A portrait-oriented movie poster featuring a hooded figure in a dark, rain-soaked alleyway lit by a single, flickering red neon sign. The style is gritty noir with high contrast, where the deep blacks of the shadows meet the saturated red glow of the light. Mist and rain droplets are visible in the air, adding depth and a sense of atmosphere. The overall mood is mysterious and high-energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJkLU2v-pldfOk6hwpTeW2e8QdQlh9qiU36LHi5fyY-3t4O3s3FhgMOSYcAXHoDgJthIlHa2V01aTRbWjdVpxxgWXukXr1_-du59C8YSg1K1r78AAB8_9A7DgWKGDb1_jR-kwCnp5LZBMkRT_L40QVk54emI-q0TnjoaczslS2ZVDN2IfbTsj6LMobgfSZfby3z7YyU5IFTkIFqRhEpctVjZxjXOvToRsgB6G9bH0vbMlhTIfmhMHTTOlOMjwD20llDS0lpPQbiqg"/>
+</div>
+</div>
+<!-- Movie Card 2 -->
+<div class="min-w-[160px] md:min-w-[220px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden bg-surface-variant">
+<img alt="Racing Movie Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A vertical cinematic poster showing a high-speed car chase on a dark, wet highway at night. The headlights of the cars create long, brilliant streaks of white and yellow light, while the taillights cast a vibrant, primary red glow over the asphalt. The composition is dynamic and full of motion blur, capturing a high-energy, authoritative action sequence. The background is a dense, black cityscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK_MJ2pTjLkZ_Jo-Fb0TGXPpnICGpwshQP3mbSOuN5aTVPmtQtQ6JAJCAYijLJ0nnUirOZzNxHdaMhf2j7fxaYI1-3bjWJGEDuicv_B4aPhnEZIGkCBz53JcJVqIXqKXuVHb77mGdlXZkI_Bl9MmS0fr18GI6eFjbmbqhmczKg4O15V1myQ_TihyUFPKJ5qOTD4xOPhsAKs2gm927AnMkg8wyQPHpR_wdEiNaMC4HOikDuvIvVWM6-arpRACINh_Lzap4bMwsOYRQ"/>
+</div>
+</div>
+<!-- Movie Card 3 -->
+<div class="min-w-[160px] md:min-w-[220px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden bg-surface-variant">
+<img alt="Fantasy Movie Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A mystical portrait of a female sorceress with glowing white eyes, standing against a background of swirling black and crimson magical energy. The lighting is ethereal and high-contrast, highlighting the intricate details of her dark, ornate costume. The color palette is strictly limited to deep blacks, pure whites, and intense primary red sparks, creating a powerful, premium fantasy aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuk9m1tRStEHpHHUbwZSnAAawlb-4JqQIpYSiEihUtE91YLCopL8koFjw46-fHbknNkyA4Q350FYe4kS4VSl90XMo6uVncn24ns9MCtSt77kGH_Rq2w7XnPTyv1BDoWVaEV4QMg-usT8rJ6b9d_n-jxMHFxlYGGAlsIsVPPA7E4_jZkJiYzBUlp9L7AJwGHOXa4_jWeKzJUY7GYG6RjvUD-Il4ZrsyqHqGHT-V8R-jDZLsgS8dsxNTk6gkYTS30zq8ZWWScf3U78o"/>
+</div>
+</div>
+<!-- Movie Card 4 -->
+<div class="min-w-[160px] md:min-w-[220px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden bg-surface-variant">
+<img alt="Thriller Movie Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An abstract cinematic poster featuring a shattered mirror reflecting a fragmented, dark forest scene. The cracks in the mirror are illuminated by a sinister red light emanating from within the glass. The background is pitch black, emphasizing the sharp, jagged edges of the reflections. The mood is psychological and suspenseful, using high-contrast visuals to create a sense of drama and unease." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu8Z0h9EGliG6EQNm7vkukAtwqkGiClZv9hoHfsMOG77RbFRMtOE4bqeU9VM6ToP2r4eZQUD_zGn-kDIx77l1w4BwOGKofouMsmXH1UwUYEiXRva_m_ILga7CUBDyvvdtOtJrQtlqB5Jwz8kDrCOCyvTl7Ek8DHoZ5cAlxs9Pzuv1U1w8A3JM7HYJ0enGXUXkCM4YPiF-cqaIJtz_e0DlJJMPyT7bU__ueN4HYLEGc8780E0Eos_ljTo3CYegwl4LIXUoZuRwpZ5s"/>
+</div>
+</div>
+<!-- Movie Card 5 -->
+<div class="min-w-[160px] md:min-w-[220px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden bg-surface-variant">
+<img alt="Space Movie Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A portrait-oriented movie poster showing a lone astronaut walking on the surface of a dark moon with a massive, vibrant red planet rising in the background. The scene is illuminated by harsh, direct sunlight that creates deep, obsidian shadows and bright white highlights on the spacesuit. The high-contrast color scheme of black, white, and primary red creates a stunning, authoritative space exploration visual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSwcfc1oWIXvZMd28Tp96zWoTcrO0ZzqF8ltR3G3EUVsmBsUrwR9pmew7vSIud191yOIT1q3-HuO4l355Bif0TG7hrOy5BLyDTpt7q2ov9s6wO3BI_HXSFvinWBYpUkrQW3zygw8VJFhyKLCBd76T2jvCsKq34i5MtDZtDZmBpN7FzbO22YH_3rxTmqI-rUlnZrZ_2eoCNJ6SzhFRYdOV6V_W_P46jNjoZd0sHRGenlOnxeujLcTDCWFGxL9L7Lg-YEdJBdN8xJYg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Row: New Releases -->
+<section class="pl-margin">
+<h3 class="font-headline-md text-headline-md mb-gutter">New Releases</h3>
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar pb-sm">
+<!-- Landscape Card 1 -->
+<div class="min-w-[320px] group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-variant">
+<img alt="New Release 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A wide cinematic shot of a modern, empty theater stage with a single, dramatic spotlight shining on a crimson velvet curtain. The rest of the theater is enveloped in deep, velvety black. The lighting is high-contrast, creating a sense of anticipation and premium performance. The primary red of the curtain is the focal point, symbolizing high-energy drama and authoritative storytelling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRSkxzGWwWj-WY822ykeWKTAcU3Y1XLV0Owxq1yh6N1l0WPkRV2tHdaWsmJ_PMIUmaryt1z_P4nCNBMOcfoKqseTwBj1km7M7mEEHjeNb6hwaIC4XIyfTaYaxS0i_SPL3SMpvJaCeVp8yE0K_NttK5e39-AhxxrKzpH-UOP341PJbHq2YvvbA56XW9i4GcSO7teRrJSKSwwyLpjgssSqoH2sHDruC_Bqi_79m7K_FVfYESqlrb29O3N4AmFduU1xqPTJavhK9qRSs"/>
+</div>
+</div>
+<!-- Landscape Card 2 -->
+<div class="min-w-[320px] group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-variant">
+<img alt="New Release 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A cinematic widescreen landscape of a futuristic city harbor where sleek black yachts are docked at a glowing red pier. The water is dark and reflective, mirroring the neon lights of the skyscrapers above. The overall visual style is high-contrast and authoritative, placing the content at the forefront through vibrant color accents against a deep black canvas. The mood is high-energy and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiPJpIntPxZLCeV9seMMEM5pVAEtZ8B7CzgXFC3GU2YW68wyW4hYUIbrJ_q3niYKEzbPRVOQyN-3h-CFbven-4Kh04B2_Rgbo17AGW-9xb-tDPU3-V5Oyls0AZE6mvsusVchKy2v36Tg-PbxTJO8-vrymbREBbVvqWfwyT91tH5p2nJeUIjuqFxSJdZUVpDB58kfmQxDeSvkBm5ZR03PZ9dvRrA2GOiIMNNB8Fi4ar31_4H2liiIcVKrhRzoiC78_vTQC6h9AQwIM"/>
+</div>
+</div>
+<!-- Landscape Card 3 -->
+<div class="min-w-[320px] group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-variant">
+<img alt="New Release 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A dramatic cinematic shot of a classic black sports car racing through a tunnel lined with vertical red neon tubes. The high-contrast lighting creates long, sharp highlights on the car's metallic body, while the surrounding environment remains in deep, cavernous shadow. This high-energy scene evokes a sense of speed, power, and premium excitement, consistent with a high-end streaming experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtV_IxAPBxR6ylIKRhkErLOj8oh4YjwSblvR8yctnPWBXs38elHWgTBVkFi0LKAHGiS9tj_BdRGh_bEWCGwgInEnND_IgP20WlIlN6VqhD5w8atWkwpZLIK5LLKExuTFGW7GfrijKJI9jkgwiJWzfSd4xoKLsH0dTOvishASFXkD7lRlsgmUa48JttA_y4GnBYKf2VMt316w_rrLTWpEH2XiYRMBHk4kaNil0peBtFVVOxIATaoJVCnaym2pljO6VPnikBi-wWD4Y"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center py-base px-xl bg-surface/95 backdrop-blur-md flat no shadows md:hidden">
+<button class="flex flex-col items-center justify-center text-primary dark:text-primary active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">video_library</span>
+<span class="font-label-sm text-label-sm">New &amp; Hot</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">download</span>
+<span class="font-label-sm text-label-sm">Downloads</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</button>
+</nav>
+<!-- Sidebar / Drawer (Hidden by default, for functionality reference) -->
+<aside class="fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-64 rounded-r-xl bg-surface-container-high dark:bg-surface-container-high shadow-xl -translate-x-full transition-transform">
+<div class="p-gutter flex flex-col items-start gap-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md">C</div>
+<div>
+<p class="font-label-bold text-primary">Cinematic Explorer</p>
+<p class="text-label-sm text-on-surface-variant">Premium Member</p>
+</div>
+</div>
+<nav class="flex-1 px-sm space-y-xs">
+<a class="flex items-center gap-md p-base rounded-lg text-on-surface-variant hover:bg-surface-variant active:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">add</span>
+<span class="font-body-md text-body-md">My List</span>
+</a>
+<a class="flex items-center gap-md p-base rounded-lg text-on-surface-variant hover:bg-surface-variant active:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-body-md text-body-md">Notifications</span>
+</a>
+<a class="flex items-center gap-md p-base rounded-lg text-on-surface-variant hover:bg-surface-variant active:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+<a class="flex items-center gap-md p-base rounded-lg text-on-surface-variant hover:bg-surface-variant active:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-body-md text-body-md">Help</span>
+</a>
+</nav>
+<div class="p-gutter border-t border-white/5">
+<a class="flex items-center gap-md p-base rounded-lg text-on-surface-variant hover:bg-surface-variant" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body-md text-body-md">Sign Out</span>
+</a>
+</div>
+</aside>
+<script src="js/navigation.js"></script></body></html>

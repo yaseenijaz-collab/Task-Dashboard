@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#d5e3ff",
+                    "tertiary-container": "#0072d7",
+                    "on-secondary-fixed-variant": "#474747",
+                    "tertiary-fixed-dim": "#a7c8ff",
+                    "outline-variant": "#5e3f3b",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "on-tertiary-fixed-variant": "#004689",
+                    "on-secondary-container": "#b6b5b4",
+                    "secondary-container": "#474747",
+                    "primary": "#ffb4aa",
+                    "inverse-on-surface": "#303030",
+                    "on-secondary": "#303030",
+                    "on-primary": "#690003",
+                    "on-surface-variant": "#e9bcb6",
+                    "on-tertiary": "#003061",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#1f1f1f",
+                    "on-primary-fixed-variant": "#930007",
+                    "on-tertiary-container": "#f8f9ff",
+                    "on-primary-fixed": "#410001",
+                    "tertiary": "#a7c8ff",
+                    "on-error": "#690005",
+                    "surface-bright": "#393939",
+                    "on-primary-container": "#fff7f6",
+                    "on-background": "#e2e2e2",
+                    "inverse-primary": "#c0000c",
+                    "surface-dim": "#131313",
+                    "surface-container-low": "#1b1b1b",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "surface-container-lowest": "#0e0e0e",
+                    "background": "#131313",
+                    "secondary-fixed": "#e4e2e1",
+                    "outline": "#af8782",
+                    "surface-variant": "#353535",
+                    "primary-container": "#e50914",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e2e2e2",
+                    "surface-tint": "#ffb4aa",
+                    "surface-container-highest": "#353535",
+                    "surface-container-high": "#2a2a2a",
+                    "surface": "#131313",
+                    "primary-fixed-dim": "#ffb4aa",
+                    "secondary": "#c8c6c6",
+                    "primary-fixed": "#ffdad5",
+                    "inverse-surface": "#e2e2e2",
+                    "on-tertiary-fixed": "#001b3c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "64px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "margin": "4% ",
+                    "sm": "12px",
+                    "base": "8px",
+                    "gutter": "16px",
+                    "lg": "40px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "label-bold": ["Be Vietnam Pro"],
+                    "display-xl": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #131313; color: #e2e2e2; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md">
+<!-- Top Navigation Bar -->
+<header class="flex justify-between items-center w-full px-gutter py-sm z-50 docked full-width top-0 sticky bg-gradient-to-b from-black/80 to-transparent">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-display-xl text-headline-lg tracking-tighter text-primary">FLIX</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+</div>
+</header>
+<main class="max-w-screen-xl mx-auto px-gutter pb-xl pt-sm">
+<!-- User Profile Hero -->
+<section class="flex flex-col md:flex-row items-center gap-md py-lg border-b border-white/10">
+<div class="relative group">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden ring-2 ring-primary-container ring-offset-4 ring-offset-background">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional and moody close-up portrait of a man in his late 20s with a sharp jawline and subtle cinematic lighting. The image is styled like a high-end film still with deep shadows and warm skin tones against a dark, out-of-focus urban background. The aesthetic is authoritative and premium, using a high-contrast dark-mode palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb2YSb2L9F0fIvxnzfpHFANeIlIW_nrH-XJ9qZ0sJM0GhdNDAxO5SaAC7R8LQP-WmQc1BuF4Tz4mTCTHHONkzbSYWgyzx_b_tpPmcajzsi-jMHrf7kAwLHOPEumQJeUzEuuuVHaL_DhjdIHsohYY_Rm_Su2tujAG-NzrWJ6ceRoEkHxxSNaUp-hx_-svBPoHjdjh09tGFqcrnwC0MLZtd0cHUcEJPfAKKiYHKudA6lJFNedJZEtv9ERXYIo6DO_lbh8mo5494ufAY"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-primary-container p-xs rounded-lg shadow-lg">
+<span class="material-symbols-outlined text-[18px] text-on-primary-container" data-icon="edit">edit</span>
+</div>
+</div>
+<div class="text-center md:text-left space-y-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Cinematic Explorer</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Premium Member since 2023</p>
+<div class="flex gap-sm pt-xs justify-center md:justify-start">
+<span class="bg-secondary-container/50 px-sm py-xs rounded-full font-label-sm text-label-sm text-secondary">Sci-Fi Fan</span>
+<span class="bg-secondary-container/50 px-sm py-xs rounded-full font-label-sm text-label-sm text-secondary">Documentary Buff</span>
+</div>
+</div>
+</section>
+<!-- Downloads Grid -->
+<section class="py-lg">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">My Downloads</h2>
+<button class="text-primary font-label-bold text-label-bold">Smart Downloads: On</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Download Item 1 -->
+<div class="bg-surface-container-high p-sm rounded-xl flex gap-sm items-center relative overflow-hidden group">
+<div class="w-24 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+<img alt="Movie Poster" class="w-full h-full object-cover" data-alt="A dark and moody cinematic poster for a sci-fi thriller featuring a lone astronaut standing on a glowing neon platform. The color palette is dominated by deep blacks and electric primary red accents. The lighting is dramatic, casting long shadows and creating a high-contrast visual impact consistent with a premium movie streaming interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHh8tmx902J8DfLCUIciiWC9poFbbkRqD-Ief-4FUXs9BS_E3kYqGT1GNQsMQhEPfL5WtsquAaqPyDBtD0OY2skqYveAikXQCzYxtgVcmX-FigyBP5P_85sI9VW1rLZ34lbFp13i1p5nH0kFeGRGDFL7_K_ARqZwRXgyoOmKrreECAAyyEPi82J0_iAtYdQGZDidCsPu7bDKlGfdznXsiga3EcgdJkrAbrscrrXRO2rF-M1XEUtEkho9EEy04UZ0QuqQ7I17oj3GY"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-32 py-xs">
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface line-clamp-1">NEBULA ASCENT</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Film • 2.4 GB</p>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between items-end">
+<span class="font-label-sm text-label-sm text-primary">Downloaded</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-error transition-colors" data-icon="delete">delete</span>
+</div>
+<div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Download Item 2 (In Progress) -->
+<div class="bg-surface-container-high p-sm rounded-xl flex gap-sm items-center relative overflow-hidden group">
+<div class="w-24 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+<img alt="Movie Poster" class="w-full h-full object-cover" data-alt="A dramatic movie poster showcasing a rain-slicked city street at night in a futuristic noir setting. Intense red and blue neon lights reflect on the puddles. The composition is low-angle and powerful, emphasizing the authoritative and premium aesthetic of a cinematic thriller. Deep shadows fill the frame, leaving only the essentials visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnxQl3-5lHTQdX3aAQYAXLdBt4jDSJsUilLEaCkfAvInB4x4PO5YKCzWiEOplpaxsbLKsDnxUIGOOJ_v3V6bFLgxL8ZZD6mBUEMh380L9Phk1VOXw1KtpG-cAZb2mGisclf8lq4dQ732iHo1VtB5BMaCQ0_RTM3Z-cnZr0t_hBx4bU1cCO3VS7uM3NNQeklAf63XMijCq47UlTWlAbxOOn-3eOL3r6425rhfOp16FVp7DVRBEDYSSTmrXpLiJhdGela9WGfj1VOd0"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-32 py-xs">
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface line-clamp-1">NIGHT SHIFT</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">S1 E4 • 840 MB</p>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between items-end">
+<span class="font-label-sm text-label-sm text-on-surface">Downloading... 65%</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-error transition-colors" data-icon="close">close</span>
+</div>
+<div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[65%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Download Item 3 -->
+<div class="bg-surface-container-high p-sm rounded-xl flex gap-sm items-center relative overflow-hidden group">
+<div class="w-24 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+<img alt="Movie Poster" class="w-full h-full object-cover" data-alt="A striking minimalist documentary poster featuring a close-up of a human eye reflecting a digital data landscape. The high-contrast image uses deep blacks and vibrant red light trails within the reflection. The visual style is modern, high-energy, and evokes a sense of technological discovery, fitting perfectly within a dark-mode cinema interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd-xhmFt2NukIwT_r5gV439g_jXIaT72VzsuEklkypG-LUES0l3nstcO5Qpm0UHTvSnAVLXDMEbQ-MUdWwgodk6DxbeDjMvdT6Mz1MlZvnuf2YPQijM3tRltXG5HRSb_SpvbRMQy_lT_g_SVdUA-G5p1ussBZaPlZzfvo2hMCixnuue_3QY08dtDWcRC7im1kvdYwNkT2SWK4GLpY0UsEFFxtl2V45YRz__AL34TskRFeO46qGE-kT0abLmTR9_C4sT21OB6SAJ-c"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-32 py-xs">
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface line-clamp-1">THE DATA MINE</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Film • 1.1 GB</p>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between items-end">
+<span class="font-label-sm text-label-sm text-primary">Downloaded</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-error transition-colors" data-icon="delete">delete</span>
+</div>
+<div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Settings List -->
+<section class="py-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Settings</h2>
+<div class="bg-surface-container rounded-xl overflow-hidden divide-y divide-white/5">
+<!-- Account -->
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 cursor-pointer transition-colors group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="person">person</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Account</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Manage your subscription and billing</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- App Settings -->
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 cursor-pointer transition-colors group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="settings">settings</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">App Settings</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Playback quality, notifications, and storage</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Help -->
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 cursor-pointer transition-colors group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="help">help</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Help &amp; Support</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">FAQs and contact our team</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Sign Out -->
+<div class="flex items-center justify-between p-md hover:bg-error-container/10 cursor-pointer transition-colors group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-error-container/80 group-hover:text-error transition-colors" data-icon="logout">logout</span>
+<div>
+<p class="font-body-md text-body-md text-error">Sign Out</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Log out of this device</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Drawer (Contextual/Hidden on Desktop) -->
+<div class="md:hidden">
+<!-- Overlay would go here in interactive version -->
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center py-base px-xl bg-surface/95 backdrop-blur-md">
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+<span class="font-label-sm text-label-sm">New &amp; Hot</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+<span class="font-label-sm text-label-sm">Downloads</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</div>
+</nav>
+<script src="js/navigation.js"></script></body></html>
